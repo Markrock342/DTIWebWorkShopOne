@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Services</title>
+    <link rel="stylesheet" href="ws01-style.css">
+</head>
+<body>
+    <div class="container">
+        
+        
+        <div class="image-container">
+            <img src="images/img1.png" alt="Online Services Image" class="header-image" />
+            <h1>Online Services V1.0</h1>
+        </div>
+        <form action="#" method="post">
+            <label for="customer_id">รหัสประจำตัวประชาชน:</label>
+            <input type="text" id="customer_id" name="customer_id" required>
+
+            <fieldset>
+                <legend>เพศ:</legend>
+                <input type="radio" id="male" name="gender" value="ชาย" checked>
+                <label for="male">ชาย</label>
+                <input type="radio" id="female" name="gender" value="หญิง">
+                <label for="female">หญิง</label>
+                <input type="radio" id="other" name="gender" value="อื่นๆ">
+                <label for="other">อื่นๆ</label>
+            </fieldset>
+
+            <label for="name">ชื่อ - นามสกุล:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">ที่อยู่:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">หมายเลขโทรศัพท์:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="service_provider">ผู้ให้บริการ:</label>
+            <select id="service_provider" name="service_provider" required>
+                <option value="AIS">AIS</option>
+                <option value="DTAC">DTAC</option>
+                <option value="TRUE">TRUE</option>
+            </select>
+
+            <button type="submit">ยืนยันข้อมูล</button>
+            <button type="reset">ยกเลิก</button>
+        </form>
+    </div>
+</body>
+</html>
