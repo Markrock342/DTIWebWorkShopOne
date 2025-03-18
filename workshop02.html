@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAU Hotel - Register</title>
+    <link rel="stylesheet" href="CSS/ws02-style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/img2.png" alt="SAU Hotel" class="logo">
+        </header>
+        <h1>SAU Hotel</h1>
+        <h2>Register</h2>
+        <form action="/submit_form" method="post">
+            <!-- ชื่อ - สกุล -->
+            <div class="form-row">
+                <label for="full_name">ชื่อ - สกุล:</label>
+                <input type="text" id="full_name" name="full_name" required>
+            </div>
+
+            <!-- คำนำหน้า -->
+            <div class="form-row">
+                <label>คำนำหน้า:</label>
+                <div class="radio-group">
+                    <input type="radio" id="prefix1" name="prefix" value="นาย" required>
+                    <label for="prefix1">นาย</label>
+
+                    <input type="radio" id="prefix2" name="prefix" value="นาง" required>
+                    <label for="prefix2">นาง</label>
+
+                    <input type="radio" id="prefix3" name="prefix" value="นางสาว" required>
+                    <label for="prefix3">นางสาว</label>
+                </div>
+            </div>
+
+            <!-- ประเภทห้อง -->
+            <div class="form-row">
+                <label for="room_type">ประเภทห้อง:</label>
+                <select id="room_type" name="room_type" required>
+                    <option value="Standard Room">Standard Room (750 บาท/คืน)</option>
+                    <option value="Deluxe Room">Deluxe Room (1000 บาท/คืน)</option>
+                </select>
+            </div>
+
+            <!-- จำนวนคืน -->
+            <div class="form-row">
+                <label for="nights">จำนวนคืนเข้าพัก:</label>
+                <input type="number" id="nights" name="nights" min="1" required>
+            </div>
+
+            <!-- จำนวนคน -->
+            <div class="form-row">
+                <label for="people">จำนวนคนเข้าพัก:</label>
+                <input type="number" id="people" name="people" min="1" required>
+            </div>
+
+            <!-- วันที่เข้าพัก -->
+            <div class="form-row">
+                <label for="checkin_date">วันที่เข้าพัก:</label>
+                <input type="date" id="checkin_date" name="checkin_date" required>
+            </div>
+
+            <!-- ออฟชั่น -->
+            <div class="form-row">
+                <label for="options">Option:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="breakfast" name="option" value="breakfast">
+                    <label for="breakfast">อาหารเช้า</label>
+
+                    <input type="checkbox" id="lunch" name="option" value="lunch">
+                    <label for="lunch">อาหารกลางวัน</label>
+
+                    <input type="checkbox" id="dinner" name="option" value="dinner">
+                    <label for="dinner">อาหารค่ำ</label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">บันทึกข้อมูล</button>
+                <button type="button" onclick="window.location.href='/'">ยกเลิก</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
