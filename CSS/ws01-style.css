@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 20px; /* ปรับขนาดฟอนต์ */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    color: #1e90ff; /* สีฟ้า */
+    margin-bottom: 10px;
+}
+
+.image-container {
+    text-align: center; /* จัดรูปให้อยู่ตรงกลาง */
+    margin-bottom: 20px;
+}
+
+.header-image {
+    width: 50%; /* ปรับขนาดรูป */
+    max-width: 600px; /* จำกัดขนาดสูงสุด */
+    height: auto; /* รักษาอัตราส่วนของรูป */
+    display: inline-block;
+}
+
+form {
+    margin-top: 20px;
+    text-align: left; /* ให้ข้อความและช่องกรอกอยู่ซ้าย */
+    display: block;
+}
+
+.form-row {
+    display: flex; /* ใช้ Flexbox */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    font-size: 16px;
+    width: 200px; /* กำหนดความกว้างคงที่ให้ label */
+    text-align: left; /* จัดข้อความให้อยู่ทางซ้าย */
+    margin-right: 10px; /* เพิ่มระยะห่างระหว่าง label และ checkbox-group */
+}
+
+.form-row input[type="text"],
+.form-row select {
+    flex: 1; /* ให้ input และ select ขยายตัวตามพื้นที่ที่เหลือ */
+    max-width: 300px; /* จำกัดความกว้างสูงสุด */
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: nowrap; /* ป้องกันการขึ้นบรรทัดใหม่ */
+    gap: 10px; /* เพิ่มระยะห่างระหว่าง checkbox และ label */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 5px; /* ลดระยะห่างระหว่าง checkbox และข้อความ */
+}
+
+.checkbox-group input[type="text"] {
+    width: 100px;
+    margin-top: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    gap: 10px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+}
+
+button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0073e6;
+}
+
+.utility-group {
+    display: flex;
+    flex-direction: column; /* จัดให้แต่ละตัวเลือกอยู่ในบรรทัดใหม่ */
+    gap: 10px; /* เพิ่มระยะห่างระหว่างตัวเลือก */
+}
+
+.utility-item {
+    display: flex;
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    gap: 10px; /* เพิ่มระยะห่างระหว่าง checkbox, label และช่องกรอก */
+}
+
+.utility-item input[type="text"] {
+    width: 150px; /* กำหนดความกว้างของช่องกรอก */
+}

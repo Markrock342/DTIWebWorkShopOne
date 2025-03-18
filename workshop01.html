@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Services</title>
+    <link rel="stylesheet" href="CSS/ws01-style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ใส่รูปจากโฟลเดอร์ images -->
+        <div class="image-container">
+            <img src="images/img1.png" alt="Online Services" class="header-image">
+        </div>
+
+        <h1>Online Services V.1.0</h1>
+
+        <h1>"ชำระค่าสาธารณูปโภคหลากหลายเพื่อความสะดวกของคุณ"</h1>
+        <form action="/submit_form" method="post">
+            <!-- ช่องรหัสประจำตัวประชาชน -->
+            <div class="form-row">
+                <label for="id_card">รหัสประจำตัวประชาชน:</label>
+                <input type="text" id="id_card" name="id_card" required>
+            </div>
+
+            <!-- ช่องคำนำหน้า -->
+            <div class="form-row">
+                <label for="prefix">คำนำหน้าชื่อ:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="prefix1" name="prefix" value="นาย">
+                    <label for="prefix1">นาย</label>
+
+                    <input type="checkbox" id="prefix2" name="prefix" value="นาง">
+                    <label for="prefix2">นาง</label>
+
+                    <input type="checkbox" id="prefix3" name="prefix" value="นางสาว">
+                    <label for="prefix3">นางสาว</label>
+                </div>
+            </div>
+
+            <!-- ช่องชื่อ - สกุล -->
+            <div class="form-row">
+                <label for="full_name">ชื่อ - สกุล:</label>
+                <input type="text" id="full_name" name="full_name" required>
+            </div>
+
+            <!-- ช่องประเภทบริการ -->
+            <div class="form-row">
+                <label>ชำระค่าสาธารณูปโภค:</label>
+                <div class="utility-group">
+                    <div class="utility-item">
+                        <input type="checkbox" id="service_water" name="service" value="water">
+                        <label for="service_water">ประปา</label>
+                        <input type="text" id="water_amount" name="water_amount" placeholder="จำนวนบาท" required>
+                    </div>
+                    <div class="utility-item">
+                        <input type="checkbox" id="service_electricity" name="service" value="electricity">
+                        <label for="service_electricity">ไฟฟ้า</label>
+                        <input type="text" id="electricity_amount" name="electricity_amount" placeholder="จำนวนบาท" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ช่องชำระค่าโทรศัพท์ -->
+            <div class="form-row">
+                <label>ชำระค่าโทรศัพท์:</label>
+                <div class="utility-group">
+                    <div class="utility-item">
+                        <input type="checkbox" id="phone_home" name="phone_provider" value="phone_home">
+                        <label for="phone_home">โทรศัพท์บ้าน</label>
+                        <input type="text" id="phone_home_amount" name="phone_home_amount" placeholder="จำนวนบาท" required>
+                    </div>
+                    <div class="utility-item">
+                        <input type="checkbox" id="phone_dtac" name="phone_provider" value="DTAC">
+                        <label for="phone_dtac">DTAC</label>
+                        <input type="text" id="phone_dtac_amount" name="phone_dtac_amount" placeholder="จำนวนบาท" required>
+                    </div>
+                    <div class="utility-item">
+                        <input type="checkbox" id="phone_ais" name="phone_provider" value="AIS">
+                        <label for="phone_ais">AIS</label>
+                        <input type="text" id="phone_ais_amount" name="phone_ais_amount" placeholder="จำนวนบาท" required>
+                    </div>
+                    <div class="utility-item">
+                        <input type="checkbox" id="phone_true" name="phone_provider" value="TRUE">
+                        <label for="phone_true">TRUE</label>
+                        <input type="text" id="phone_true_amount" name="phone_true_amount" placeholder="จำนวนบาท" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ส่วนลดเพิ่มเติม -->
+            <div class="form-row">
+                <label for="discount">ส่วนลดเฉพาะค่าสาธารณูปโภค:</label>
+                <select id="discount" name="discount">
+                    <option value="none">ไม่มีส่วนลด</option>
+                    <option value="discount">มีส่วนลด</option>
+                </select>
+            </div>
+
+            <!-- ปุ่มยืนยันและยกเลิก -->
+            <div class="form-actions">
+                <button type="submit">ชำระค่าบริการ</button>
+                <button type="button" onclick="window.location.href='/'">ยกเลิก</button>
+            </div>
+        </form>
+
+        
+        <p class="note">
+            <strong><u>หมายเหตุ:</u></strong> ค่าบริการคิด 15 บาทต่อรายการ โดยคิดเฉพาะการชำระค่าโทรศัพท์เท่านั้น
+        </p>
+    </div>
+</body>
+</html>
